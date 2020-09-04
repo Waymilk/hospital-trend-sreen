@@ -1,15 +1,22 @@
+<!--
+ * @Author: Nahco.Huang
+ * @Date: 2020-09-04 10:08:29
+ * @LastEditTime: 2020-09-04 13:17:13
+ * @LastEditors: Nahco.Huang
+ * @Description: 
+-->
 <template>
   <div id="app">
-    <datav />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import datav from './components/datav/index.vue'
+// import datav from './components/datav/index.vue'
 export default {
   name: 'App',
   components: {
-    datav
+    // datav
   }
 }
 </script>

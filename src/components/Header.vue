@@ -1,3 +1,10 @@
+<!--
+ * @Author: Nahco.Huang
+ * @Date: 2020-09-04 10:08:29
+ * @LastEditTime: 2020-09-04 11:39:35
+ * @LastEditors: Nahco.Huang
+ * @Description: 
+-->
 <template>
   <div class="screen-header">
     <div class="logo">
@@ -5,8 +12,8 @@
     </div>
     <div class="center">
       <div class="txt">
-        <div class="cn">医   院   业   务   动   态</div>
-        <div class="eng">Trends of Hospital Business</div>
+        <div class="cn">{{ title }}</div>
+        <div class="eng">{{ enTitle }}</div>
       </div>
     </div>
   </div>
@@ -15,6 +22,13 @@
 <script>
 export default {
   name: 'Header',
+
+  data () {
+    return {
+      title: this.$route.meta.title,
+      enTitle: this.$route.meta.enTitle
+    }
+  }
 }
 </script>
 
@@ -53,6 +67,9 @@ export default {
       -webkit-text-fill-color:transparent;
       padding-bottom: 20px;
       line-height: 1.4;
+    }
+    .cn {
+      text-align-last: justify;
     }
     .eng{
       font-size: 14px;

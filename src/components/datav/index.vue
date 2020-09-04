@@ -2,20 +2,19 @@
   <div id="data-view">
     <dv-full-screen-container>
       <Header class="header" />
-      <CategoryBox class="category-box" />
-      <!-- <dv-border-box-1></dv-border-box-1> -->
+      <router-view />
     </dv-full-screen-container>
   </div>
 </template>
 
 <script>
 import Header from '../Header'
-import CategoryBox from '../categoryBox/index'
+// import CategoryBox from '../categoryBox/index'
 export default {
   name: 'DataView',
   components: {
     Header,
-    CategoryBox
+    // CategoryBox
   },
   data () {
     return {}
@@ -39,7 +38,8 @@ export default {
       height: 8%;
       margin-bottom: 1%;
     }
-    .category-box{
+    .category-box,
+    .overview{
       flex:1;
     }
   }
