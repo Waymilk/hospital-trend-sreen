@@ -45,6 +45,8 @@ export default {
       padding: 16px 0 0 20px;
       font-size: 14px;
       color: #fff;
+      height: 36px;
+      box-sizing: border-box;
     }
   }
   .angle{
