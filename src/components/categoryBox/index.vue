@@ -28,6 +28,7 @@ import BusinessDynamic from './BusinessDynamic'
 import PatientAnalysis from './PatientAnalysis'
 import BusinessRanking from './BusinessRanking'
 import IncomeRanking from './IncomeRanking'
+import BoxWrap from '../BoxWrap'
 export default {
   name: 'Header',
   components:{
@@ -36,7 +37,8 @@ export default {
     BusinessDynamic,
     PatientAnalysis,
     BusinessRanking,
-    IncomeRanking
+    IncomeRanking,
+    BoxWrap
   }
 }
 </script>
