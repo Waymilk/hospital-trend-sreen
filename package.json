@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "@jiaminghi/data-view": "^2.9.9",
+    "babel-plugin-component": "^1.1.1",
     "core-js": "^3.6.5",
     "echarts": "^4.9.0",
+    "element-ui": "^2.13.2",
     "vue": "^2.6.11",
     "vue-router": "^3.4.3"
   },

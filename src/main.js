@@ -1,18 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import {fullScreenContainer} from '@jiaminghi/data-view'
-import { borderBox7 } from '@jiaminghi/data-view'
-import { borderBox4 } from '@jiaminghi/data-view'
+import { fullScreenContainer, borderBox4, borderBox7 } from '@jiaminghi/data-view'
+import 'element-ui/lib/theme-chalk/index.css'
+import { Select, Option } from 'element-ui'
 
 Vue.config.productionTip = false
 
 Vue.use(fullScreenContainer)
-Vue.use(borderBox7)
-Vue.use(borderBox4)
+  .use(borderBox7)
+  .use(borderBox4)
 
+Vue.use(Select).use(Option)
 
 new Vue({
   router,
-  render: h => h(App),
+  render: h => h(App)
 }).$mount('#app')
