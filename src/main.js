@@ -11,10 +11,8 @@ Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
 
 Vue.use(fullScreenContainer)
-  .use(borderBox7)
-  .use(borderBox4)
-
-Vue.use(Select).use(Option)
+Vue.use(conicalColumnChart)
+Vue.prototype.$echarts = echarts
 
 new Vue({
   router,
