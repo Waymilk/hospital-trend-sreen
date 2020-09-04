@@ -1,11 +1,23 @@
 <template>
   <div class="category-box">
-    <ResourceDynamic class="item" />
-    <IncomeDynamics class="item" />
-    <BusinessDynamic class="item" />
-    <PatientAnalysis class="item" />
-    <BusinessRanking class="item" />
-    <IncomeRanking class="item" />
+    <BoxWrap class="item" title="资源动态">
+      <ResourceDynamic />
+    </BoxWrap>
+    <BoxWrap class="item"  title="收入动态">
+      <IncomeDynamics />
+    </BoxWrap>
+    <BoxWrap class="item"  title="业务动态">
+      <BusinessDynamic />
+    </BoxWrap>
+    <BoxWrap class="item"  title="患者分析">
+      <PatientAnalysis />
+    </BoxWrap>
+    <BoxWrap class="item"  title="业务排名">
+      <BusinessRanking />
+    </BoxWrap>
+    <BoxWrap class="item"  title="收入排名">
+      <IncomeRanking />
+    </BoxWrap>
   </div>
 </template>
 
@@ -34,14 +46,15 @@ export default {
 .category-box{
   // background-color: #fff;
   padding: 12px;
+  box-sizing: border-box;
   display: flex;
   flex-wrap:wrap;
   justify-content: space-evenly;
   align-content: center;
   .item{
-    flex-basis: 32.8%;
-    margin-top: 8px;
-    height: 49%;
+    flex-basis: 31.5%;
+    margin-top: 12px;
+    height: 47%;
   }
 
 }

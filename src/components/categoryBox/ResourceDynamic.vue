@@ -1,10 +1,6 @@
 <template>
   <div>
-    <dv-border-box-7 :color="['rgba(19,32,67,.8)','#006cff']" backgroundColor="rgba(19,32,67,.8)" class="self-box">
-      <div class="box-wrap">
-
-      </div>
-    </dv-border-box-7>
+    
   </div>
 </template>
 
