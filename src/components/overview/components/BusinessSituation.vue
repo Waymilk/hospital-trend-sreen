@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-05 08:23:37
- * @LastEditTime: 2020-09-05 09:22:30
+ * @LastEditTime: 2020-09-05 16:16:54
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务情况
 -->
@@ -122,6 +122,9 @@ export default {
             },
             axisTick: {
               show: false
+            },
+            axisLabel: {
+              interval: 0
             }
           }
         ],
