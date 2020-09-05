@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-04 13:35:00
- * @LastEditTime: 2020-09-04 18:15:00
+ * @LastEditTime: 2020-09-05 09:22:45
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务趋势
 -->
@@ -140,6 +140,9 @@ export default {
                 color: '#4660AA'
               }
             },
+            axisTick: {
+              show: false
+            },
             splitLine: {
               lineStyle: {
                 color: '#4660AA',
@@ -248,6 +251,9 @@ export default {
               lineStyle: {
                 color: '#4660AA'
               }
+            },
+            axisTick: {
+              show: false
             },
             splitLine: {
               lineStyle: {

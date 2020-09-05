@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-04 13:24:34
- * @LastEditTime: 2020-09-04 14:34:12
+ * @LastEditTime: 2020-09-05 08:26:36
  * @LastEditors: Nahco.Huang
  * @Description:  医院业务总览
 -->
@@ -10,7 +10,9 @@
     <box-wrap class="item" title="年度业务趋势" :selectable="true">
       <business-trends />
     </box-wrap>
-    <box-wrap class="item" title="年度业务情况" />
+    <box-wrap class="item" title="年度业务情况">
+      <business-situation />
+    </box-wrap>
     <box-wrap class="item" title="药品分析" />
     <box-wrap class="item" title="患者负担分析" />
     <box-wrap class="item" title="医疗质量分析" />
@@ -21,12 +23,14 @@
 <script>
 import BoxWrap from '../BoxWrap.vue'
 import BusinessTrends from './components/BusinessTrends.vue'
+import BusinessSituation from './components/BusinessSituation.vue'
 export default {
   name: 'Overview',
 
   components: {
     BoxWrap,
-    BusinessTrends
+    BusinessTrends,
+    BusinessSituation
   },
 
   mixins: [],
