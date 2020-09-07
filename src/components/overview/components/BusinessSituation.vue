@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-05 08:23:37
- * @LastEditTime: 2020-09-05 16:16:54
+ * @LastEditTime: 2020-09-07 14:57:28
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务情况
 -->
@@ -47,8 +47,18 @@ export default {
       chartType: 0,
       chartData: {
         name: '门诊人次',
-        xData: ['骨科', '耳鼻喉', '神经外科', '心血管', '内分泌', '皮肤科', '内科', '外科', '中医药'],
-        yData: [0.95, 0.85, 0.75, 0.65, 0.55, 0.45, 0.35, 0.25, 0.20, 0.15],
+        xData: [
+          '骨科',
+          '耳鼻喉',
+          '神经外科',
+          '心血管',
+          '内分泌',
+          '皮肤科',
+          '内科',
+          '外科',
+          '中医药'
+        ],
+        yData: [0.95, 0.85, 0.75, 0.65, 0.55, 0.45, 0.35, 0.25, 0.2, 0.15],
         barColor: ['#006CFF', '#004CB4']
       }
     }
@@ -60,11 +70,33 @@ export default {
     chartType(value) {
       if (value === 0) {
         this.chartData.name = '门诊人次'
-        this.chartData.yData = [0.95, 0.85, 0.75, 0.65, 0.55, 0.45, 0.35, 0.25, 0.20, 0.15]
+        this.chartData.yData = [
+          0.95,
+          0.85,
+          0.75,
+          0.65,
+          0.55,
+          0.45,
+          0.35,
+          0.25,
+          0.2,
+          0.15
+        ]
         this.chartData.barColor = ['#006CFF', '#004CB4']
       } else if (value === 1) {
         this.chartData.name = '住院人次'
-        this.chartData.yData = [0.55, 0.50, 0.45, 0.40, 0.35, 0.30, 0.25, 0.20, 0.15, 0.10]
+        this.chartData.yData = [
+          0.55,
+          0.5,
+          0.45,
+          0.4,
+          0.35,
+          0.3,
+          0.25,
+          0.2,
+          0.15,
+          0.1
+        ]
         this.chartData.barColor = ['#6600FF', '#6700B6']
       }
       this.initBarChart()
@@ -87,14 +119,6 @@ export default {
         tooltip: {
           trigger: 'axis'
         },
-        // legend: {
-        //   right: 0,
-        //   textStyle: {
-        //     color: '#FEFEFE'
-        //   },
-        //   icon: 'circle',
-        //   data: ['门诊人次', '住院人次']
-        // },
         grid: {
           left: '4%',
           right: '8%',
@@ -109,7 +133,10 @@ export default {
             data: this.chartData.xData,
             axisPointer: {
               show: true,
-              type: 'shadow'
+              type: 'shadow',
+              shadowStyle: {
+                color: 'rgba(250,250,250,0.1)'
+              }
             },
             nameTextStyle: {
               color: '#4660AA'
@@ -160,13 +187,16 @@ export default {
             data: this.chartData.yData,
             barWidth: '10',
             itemStyle: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 0,
-                color: this.chartData.barColor[0]
-              }, {
-                offset: 1,
-                color: this.chartData.barColor[1]
-              }]),
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: this.chartData.barColor[0]
+                },
+                {
+                  offset: 1,
+                  color: this.chartData.barColor[1]
+                }
+              ]),
               barBorderRadius: [5, 5, 5, 5]
             }
           }
@@ -190,30 +220,30 @@ export default {
   }
   .panel {
     box-sizing: border-box;
-    padding: 15px;
+    padding   : 15px;
     .item {
-      box-sizing: border-box;
-      width: 48%;
-      margin-right: 20px;
-      margin-bottom: 22px;
-      height: 43.5%;
-      display: inline-block;
+      box-sizing    : border-box;
+      width         : 48%;
+      margin-right  : 20px;
+      margin-bottom : 22px;
+      height        : 43.5%;
+      display       : inline-block;
       vertical-align: middle;
       &:nth-child(2n) {
         margin-right: 0;
       }
       .wrap {
         background-color: rgba(255, 255, 255, 0.03);
-        border-radius: 4px;
-        height: 100%;
-        padding: 0 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 32px;
-        color: #006cff;
+        border-radius   : 4px;
+        height          : 100%;
+        padding         : 0 10px;
+        display         : flex;
+        justify-content : space-between;
+        align-items     : center;
+        font-size       : 32px;
+        color           : #006cff;
         .title {
-          color: #4660aa;
+          color    : #4660aa;
           font-size: 12px;
         }
       }
@@ -223,22 +253,22 @@ export default {
     position: relative;
     .btns {
       position: absolute;
-      top: 0;
-      right: 2%;
+      top     : 0;
+      right   : 2%;
     }
   }
   .el-button {
-    border-color: #006CFF;
-    background-color: #202C48;
-    padding: 6px 9px;
-    font-size: 12px;
-    font-weight: 400;
-    color: #006CFF;
+    border-color    : #006cff;
+    background-color: #202c48;
+    padding         : 6px 9px;
+    font-size       : 12px;
+    font-weight     : 400;
+    color           : #006cff;
   }
-   .active {
-    background-color: #006CFF;
-    font-weight: bold;
-    color: #ffffff;
+  .active {
+    background-color: #006cff;
+    font-weight     : bold;
+    color           : #ffffff;
   }
 }
 </style>
