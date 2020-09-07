@@ -3,12 +3,12 @@
  * @Date: 2020-09-04 10:08:29
  * @LastEditTime: 2020-09-04 11:39:35
  * @LastEditors: Nahco.Huang
- * @Description: 
+ * @Description:
 -->
 <template>
   <div class="screen-header">
     <div class="logo">
-      <img src="../assets/logo.png" alt="">
+      <img src="../assets/img/logo.png" alt="">
     </div>
     <div class="center">
       <div class="txt">
@@ -23,7 +23,7 @@
 export default {
   name: 'Header',
 
-  data () {
+  data() {
     return {
       title: this.$route.meta.title,
       enTitle: this.$route.meta.enTitle
@@ -52,7 +52,7 @@ export default {
     width: 76%;
     margin:0 auto;
     height:36px;
-    background-image: url(../assets/header.png);
+    background-image: url(../assets/img/header.png);
     background-size: 100% 100%;
     text-align: center;
     font-size: 20px;

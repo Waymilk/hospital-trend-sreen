@@ -3,11 +3,11 @@
  * @Date: 2020-09-04 10:08:29
  * @LastEditTime: 2020-09-04 13:17:13
  * @LastEditors: Nahco.Huang
- * @Description: 
+ * @Description:
 -->
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

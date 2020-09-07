@@ -1,22 +1,20 @@
 <template>
   <div id="data-view">
     <dv-full-screen-container>
-      <Header class="header" />
+      <screen-header class="header" />
       <router-view />
     </dv-full-screen-container>
   </div>
 </template>
 
 <script>
-import Header from '../Header'
-// import CategoryBox from '../categoryBox/index'
+import ScreenHeader from '../Header'
 export default {
   name: 'DataView',
   components: {
-    Header,
-    // CategoryBox
+    ScreenHeader
   },
-  data () {
+  data() {
     return {}
   },
   methods: {}
@@ -29,7 +27,7 @@ export default {
   height: 100%;
   color: #fff;
   #dv-full-screen-container {
-    background-image: url(../../assets/background.png);
+    background-image: url(../../assets/img/background.png);
     background-size: 100% 100%;
     box-shadow: 0 0 3px blue;
     display: flex;

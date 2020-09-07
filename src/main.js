@@ -5,15 +5,20 @@ import { fullScreenContainer, borderBox4, borderBox7, conicalColumnChart } from 
 import 'element-ui/lib/theme-chalk/index.css'
 import { Select, Option, Button } from 'element-ui'
 import echarts from 'echarts'
+import vueSwiper from 'vue-awesome-swiper'
+
+import 'swiper/swiper.less'
 
 Vue.config.productionTip = false
 
 Vue.prototype.$echarts = echarts
 
 Vue.use(fullScreenContainer)
+Vue.use(vueSwiper)
 Vue.use(conicalColumnChart)
 Vue.use(borderBox4).use(borderBox7)
 Vue.use(Select).use(Option).use(Button)
+
 Vue.prototype.$echarts = echarts
 
 new Vue({

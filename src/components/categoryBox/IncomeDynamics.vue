@@ -1,37 +1,41 @@
 <template>
   <div>
-    <img src="../../assets/income.png" class="income" alt="">
-    <div class="income-bar " v-for="(item,index) in incomeList" :key="index" :class="item.type">
-      <div class="title">{{item.name}}</div>
-      <div class="number">{{item.number}} 万元</div>
+    <img src="../../assets/img/income.png" class="income" alt="">
+    <div v-for="(item,index) in incomeList" :key="index" class="income-bar " :class="item.type">
+      <div class="title">{{ item.name }}</div>
+      <div class="price"><span class="number">{{ item.number }}</span> 万元</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    components: {},
-    props: {},
-    data() {
-      return {
-        incomeList:[
-          {type:'outpatient',number:'6,586',name:'门急诊业务收入'},
-          {type:'inspect',number:'14,265',name:'检查检验收入'},
-          {type:'settlement',number:'4,626',name:'医院结算收入'},
-          {type:'drug',number:'5,864',name:'药品业务收入'},
-          {type:'medical',number:'3,423',name:'体检业务收入'}
-        ]
-      };
-    },
-    watch: {},
-    computed: {},
-    methods: {},
-    created() {},
-    mounted() {}
-  };
+  components: {},
+  props: {},
+  data() {
+    return {
+      incomeList: [
+        { type: 'outpatient', number: '6,586', name: '门急诊业务收入' },
+        { type: 'inspect', number: '14,265', name: '检查检验收入' },
+        { type: 'settlement', number: '4,626', name: '医院结算收入' },
+        { type: 'drug', number: '5,864', name: '药品业务收入' },
+        { type: 'medical', number: '3,423', name: '体检业务收入' }
+      ]
+    }
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {},
+  methods: {}
+}
 </script>
 <style lang="less" scoped>
 @import './style/box.less';
+@font-face {
+  font-family: "Digital-7Mono";
+  src: url("../../assets/fonts/Digital-7Mono.ttf");
+}
 .income{
   width:80%;
   position: absolute;
@@ -43,8 +47,13 @@ export default {
   color:#fff;
   line-height: 1.6;
   position: absolute;
-  .number{
+  .price{
     color: #006CFF;
+    line-height: normal;
+    .number{
+      font-size: 16px;
+      font-family: "Digital-7Mono";
+    }
   }
 }
 .outpatient{

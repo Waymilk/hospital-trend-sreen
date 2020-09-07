@@ -1,23 +1,23 @@
 <template>
   <div class="category-box">
-    <BoxWrap class="item" title="资源动态">
-      <ResourceDynamic />
-    </BoxWrap>
-    <BoxWrap class="item"  title="收入动态">
-      <IncomeDynamics />
-    </BoxWrap>
-    <BoxWrap class="item"  title="业务动态">
-      <BusinessDynamic />
-    </BoxWrap>
-    <BoxWrap class="item"  title="患者分析">
-      <PatientAnalysis />
-    </BoxWrap>
-    <BoxWrap class="item"  title="业务排名">
-      <BusinessRanking />
-    </BoxWrap>
-    <BoxWrap class="item"  title="收入排名">
-      <IncomeRanking />
-    </BoxWrap>
+    <box-wrap class="item" title="资源动态">
+      <resource-dynamic />
+    </box-wrap>
+    <box-wrap class="item" title="收入动态">
+      <income-dynamics />
+    </box-wrap>
+    <box-wrap class="item" title="业务动态">
+      <business-dynamic />
+    </box-wrap>
+    <box-wrap class="item" title="患者分析">
+      <patient-analysis />
+    </box-wrap>
+    <box-wrap class="item" title="业务排名">
+      <business-ranking />
+    </box-wrap>
+    <box-wrap class="item" title="收入排名">
+      <income-ranking />
+    </box-wrap>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ import IncomeRanking from './IncomeRanking'
 import BoxWrap from '../BoxWrap'
 export default {
   name: 'Header',
-  components:{
+  components: {
     ResourceDynamic,
     IncomeDynamics,
     BusinessDynamic,

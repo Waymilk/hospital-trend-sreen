@@ -3,7 +3,7 @@
     <img
       v-for="(item,index) in 4"
       :key="index"
-      src="../assets/angle.png"
+      src="../assets/img/angle.png"
       class="angle"
       :class="'angle-' + (index+1)"
       alt
@@ -20,7 +20,6 @@
           </el-select>
         </div>
       </div>
-      <div class="title" />
       <slot />
     </div>
   </div>
