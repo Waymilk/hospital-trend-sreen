@@ -24,11 +24,11 @@
       </div>
     </div>
     <div class="now-date">
-      <div>{{weekday}}</div>
-      <div>{{nowDate}} </div>
+      <div>{{ weekday }}</div>
+      <div>{{ nowDate }} </div>
     </div>
     <div class="now-time">
-      {{nowTime}}
+      {{ nowTime }}
     </div>
   </div>
 </template>

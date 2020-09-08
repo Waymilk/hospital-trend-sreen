@@ -23,7 +23,7 @@ export default {
         { name: '手术间', number: '40' },
         { name: '空闲手术间', number: '2' },
         { name: '重症床位', number: '1864' },
-        { name: '空闲重症床位', number: '48' }
+        { name: '空闲重症床位', number: '22.2482' }
       ]
     }
   },

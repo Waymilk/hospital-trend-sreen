@@ -15,7 +15,10 @@
     </div>
     <div class="progress">
       <div class="progress-bar">
-        <div ref="progress" style="height:100%;" />
+        <div
+          ref="progress"
+          style="height:100%;"
+        />
       </div>
       <div class="progress-num">
         <span :style="{color: intensityNumberColor}">{{ intensity }}</span>

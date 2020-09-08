@@ -9,6 +9,7 @@
         <span class="title">
           <img
             v-if="item.icon"
+            style="margin-right:20px"
             :src="require('../assets/img/'+item.icon+'.png')"
             alt=""
           >
@@ -18,7 +19,11 @@
           </span>
         </span>
         <span class="number">
-          <DigitRoll :rollDigits="item.number" />
+          <IOdometer
+            class="iOdometer"
+            :duration="200"
+            :value="item.number"
+          />
         </span>
       </div>
     </div>
@@ -26,9 +31,10 @@
 </template>
 
 <script>
-import DigitRoll from '@huoyu/vue-digitroll';
+import IOdometer from 'vue-odometer';
+import 'odometer/themes/odometer-theme-default.css';
 export default {
-  components: {DigitRoll},
+  components: {IOdometer},
   props: {
     dynamicData: {
       type: Array,
@@ -83,13 +89,15 @@ export default {
         align-items: center;
         .txt{
           display: inline-block;
-          margin-left: 20px;
         }
       }
       .number{
         font-family: "Digital-7Mono";
-        letter-spacing:4px;
+        letter-spacing:2px;
         .d-roll-wrapper{margin: 0;}
+        .iOdometer{
+          font-family: "Digital-7Mono";
+        }
       }
     }
   }
