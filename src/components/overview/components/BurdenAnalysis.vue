@@ -7,7 +7,10 @@
 -->
 <template>
   <div class="burden-analysis">
-    <div ref="chart" style="height: 100%;" />
+    <div
+      ref="chart"
+      style="height: 100%;"
+    />
   </div>
 </template>
 

@@ -11,12 +11,29 @@
     <div class="background">
       <div class="title-bar">
         <span class="title">{{ title }}</span>
-        <div v-if="selectable" class="year-selector">
+        <div
+          v-if="selectable"
+          class="year-selector"
+        >
           <span>年份：</span>
-          <el-select v-model="year" placeholder="请选择" size="mini" @change="handleSelectChange">
-            <el-option label="2020" value="2020" />
-            <el-option label="2019" value="2019" />
-            <el-option label="2018" value="2018" />
+          <el-select
+            v-model="year"
+            placeholder="请选择"
+            size="mini"
+            @change="handleSelectChange"
+          >
+            <el-option
+              label="2020"
+              value="2020"
+            />
+            <el-option
+              label="2019"
+              value="2019"
+            />
+            <el-option
+              label="2018"
+              value="2018"
+            />
           </el-select>
         </div>
       </div>

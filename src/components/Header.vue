@@ -8,12 +8,19 @@
 <template>
   <div class="screen-header">
     <div class="logo">
-      <img src="../assets/img/logo.png" alt="">
+      <img
+        src="../assets/img/logo.png"
+        alt=""
+      >
     </div>
     <div class="center">
       <div class="txt">
-        <div class="cn">{{ title }}</div>
-        <div class="eng">{{ enTitle }}</div>
+        <div class="cn">
+          {{ title }}
+        </div>
+        <div class="eng">
+          {{ enTitle }}
+        </div>
       </div>
     </div>
   </div>

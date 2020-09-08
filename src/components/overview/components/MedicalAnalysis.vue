@@ -8,7 +8,10 @@
 <template>
   <div class="medical-analysis">
     <div class="chart">
-      <div ref="chart" style="height:100%;" />
+      <div
+        ref="chart"
+        style="height:100%;"
+      />
     </div>
   </div>
 </template>

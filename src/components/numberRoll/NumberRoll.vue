@@ -6,10 +6,17 @@
         :key="index"
         :class="{'number-item': !isNaN(item) }"
       >
-        <span v-if="!isNaN(item)" id="Number" :class="{'fontChange':isRanking}">
+        <span
+          v-if="!isNaN(item)"
+          id="Number"
+          :class="{'fontChange':isRanking}"
+        >
           <i ref="numberItem">0123456789</i>
         </span>
-        <span v-else class="dou">{{ item }}</span>
+        <span
+          v-else
+          class="dou"
+        >{{ item }}</span>
       </li>
     </ul>
   </div>

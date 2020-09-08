@@ -7,22 +7,44 @@
 -->
 <template>
   <div class="overview">
-    <box-wrap class="item" title="年度业务趋势" :selectable="true">
+    <box-wrap
+      class="item"
+      title="年度业务趋势"
+      :selectable="true"
+    >
       <business-trends />
     </box-wrap>
-    <box-wrap class="item" title="年度业务情况">
+    <box-wrap
+      class="item"
+      title="年度业务情况"
+    >
       <business-situation />
     </box-wrap>
-    <box-wrap class="item" title="药品分析" :selectable="true">
+    <box-wrap
+      class="item"
+      title="药品分析"
+      :selectable="true"
+    >
       <medical-analysis />
     </box-wrap>
-    <box-wrap class="item" title="患者负担分析" :selectable="true">
+    <box-wrap
+      class="item"
+      title="患者负担分析"
+      :selectable="true"
+    >
       <burden-analysis />
     </box-wrap>
-    <box-wrap class="item" title="医疗质量分析" :selectable="true">
+    <box-wrap
+      class="item"
+      title="医疗质量分析"
+      :selectable="true"
+    >
       <quality-analysis />
     </box-wrap>
-    <box-wrap class="item" title="病种分析">
+    <box-wrap
+      class="item"
+      title="病种分析"
+    >
       <disease-analysis />
     </box-wrap>
   </div>

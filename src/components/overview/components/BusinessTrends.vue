@@ -7,8 +7,14 @@
 -->
 <template>
   <div class="business-trends">
-    <div ref="chart1" style="height: 50%" />
-    <div ref="chart2" style="height: 50%" />
+    <div
+      ref="chart1"
+      style="height: 50%"
+    />
+    <div
+      ref="chart2"
+      style="height: 50%"
+    />
   </div>
 </template>
 

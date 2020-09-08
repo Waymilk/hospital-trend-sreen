@@ -1,9 +1,22 @@
 <template>
   <div>
-    <img src="../../assets/img/income.png" class="income" alt="">
-    <div v-for="(item,index) in incomeList" :key="index" class="income-bar " :class="item.type">
-      <div class="title">{{ item.name }}</div>
-      <div class="price"><span class="number">{{ item.number }}</span> 万元</div>
+    <img
+      src="../../assets/img/income.png"
+      class="income"
+      alt=""
+    >
+    <div
+      v-for="(item,index) in incomeList"
+      :key="index"
+      class="income-bar "
+      :class="item.type"
+    >
+      <div class="title">
+        {{ item.name }}
+      </div>
+      <div class="price">
+        <span class="number">{{ item.number }}</span> 万元
+      </div>
     </div>
   </div>
 </template>

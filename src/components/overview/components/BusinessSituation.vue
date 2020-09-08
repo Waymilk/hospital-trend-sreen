@@ -8,7 +8,11 @@
 <template>
   <div class="business-situation">
     <div class="panel">
-      <div v-for="(item,index) in panelData" :key="index" class="item">
+      <div
+        v-for="(item,index) in panelData"
+        :key="index"
+        class="item"
+      >
         <div class="wrap">
           <span class="title">{{ item.label }}（{{ item.unit }}）：</span>
           <span>{{ item.value }}</span>
@@ -16,10 +20,25 @@
       </div>
     </div>
     <div class="chart">
-      <div ref="chart" style="height:100%;" />
+      <div
+        ref="chart"
+        style="height:100%;"
+      />
       <div class="btns">
-        <el-button round :class="{'active': chartType === 0}" @click="chartType = 0">门诊人次</el-button>
-        <el-button round :class="{'active': chartType === 1}" @click="chartType = 1">出院人次</el-button>
+        <el-button
+          round
+          :class="{'active': chartType === 0}"
+          @click="chartType = 0"
+        >
+          门诊人次
+        </el-button>
+        <el-button
+          round
+          :class="{'active': chartType === 1}"
+          @click="chartType = 1"
+        >
+          出院人次
+        </el-button>
       </div>
     </div>
   </div>

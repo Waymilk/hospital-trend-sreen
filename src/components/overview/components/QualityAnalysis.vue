@@ -7,11 +7,32 @@
 -->
 <template>
   <div class="quality-analysis">
-    <div ref="chart" style="height: 100%;" />
+    <div
+      ref="chart"
+      style="height: 100%;"
+    />
     <div class="btns">
-      <el-button round :class="{'active': chartType === 0}" @click="chartType = 0">三四级手术占比</el-button>
-      <el-button round :class="{'active': chartType === 1}" @click="chartType = 1">CD型病历</el-button>
-      <el-button round :class="{'active': chartType === 2}" @click="chartType = 2">平均住院日</el-button>
+      <el-button
+        round
+        :class="{'active': chartType === 0}"
+        @click="chartType = 0"
+      >
+        三四级手术占比
+      </el-button>
+      <el-button
+        round
+        :class="{'active': chartType === 1}"
+        @click="chartType = 1"
+      >
+        CD型病历
+      </el-button>
+      <el-button
+        round
+        :class="{'active': chartType === 2}"
+        @click="chartType = 2"
+      >
+        平均住院日
+      </el-button>
     </div>
   </div>
 </template>

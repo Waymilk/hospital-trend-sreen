@@ -7,7 +7,10 @@
 -->
 <template>
   <div class="disease-analysis">
-    <div ref="chart" style="height: 100%;" />
+    <div
+      ref="chart"
+      style="height: 100%;"
+    />
   </div>
 </template>
 

@@ -1,12 +1,22 @@
 <template>
   <div class="box-content">
     <div class="chart-wrap">
-      <div class="title">满意度分析</div>
-      <div ref="satAnalysis" style="width: 100%;height:100%;" />
+      <div class="title">
+        满意度分析
+      </div>
+      <div
+        ref="satAnalysis"
+        style="width: 100%;height:100%;"
+      />
     </div>
     <div class="chart-wrap">
-      <div class="title">年龄分析</div>
-      <div ref="ageAnalysis" style="width: 100%;height:100%;" />
+      <div class="title">
+        年龄分析
+      </div>
+      <div
+        ref="ageAnalysis"
+        style="width: 100%;height:100%;"
+      />
     </div>
   </div>
 </template>

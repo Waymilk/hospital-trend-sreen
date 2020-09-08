@@ -1,9 +1,17 @@
 <template>
   <div class="dynamic-bar">
-    <div v-for="(item,index) in dynamicData" :key="index" class="item">
+    <div
+      v-for="(item,index) in dynamicData"
+      :key="index"
+      class="item"
+    >
       <div class="wrap">
         <span class="title">
-          <img v-if="item.icon" :src="require('../assets/img/'+item.icon+'.png')" alt="">
+          <img
+            v-if="item.icon"
+            :src="require('../assets/img/'+item.icon+'.png')"
+            alt=""
+          >
           <span class="txt">
             {{ item.name }}
             <div>{{ item.desc }}</div>

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div ref="incomeRanking" style="width: 100%;height:100%;" />
+    <div
+      ref="incomeRanking"
+      style="width: 100%;height:100%;"
+    />
   </div>
 </template>
 
