@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 09:23:56
- * @LastEditTime: 2020-09-07 14:57:47
+ * @LastEditTime: 2020-09-08 14:50:01
  * @LastEditors: Nahco.Huang
  * @Description: 药品分析
 -->
@@ -13,10 +13,20 @@
         style="height:100%;"
       />
     </div>
+    <div class="progress">
+      <div class="progress-bar">
+        <div ref="progress" style="height:100%;" />
+      </div>
+      <div class="progress-num">
+        <span :style="{color: intensityNumberColor}">{{ intensity }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import progressImg from '@/assets/img/progress.png'
+import echarts from 'echarts'
 export default {
   name: 'MedicalAnalysis',
 
@@ -27,7 +37,10 @@ export default {
   props: {},
 
   data() {
-    return {}
+    return {
+      intensity: 123.25,
+      intensityMax: 200
+    }
   },
 
   computed: {
@@ -37,6 +50,12 @@ export default {
         arr.push(Number((Math.random() * 5 + 20).toFixed(2)))
       }
       return arr
+    },
+
+    intensityNumberColor() {
+      const green = parseInt((1 - (this.intensity / this.intensityMax)) * 200 + 20)
+      const red = parseInt((this.intensity / this.intensityMax) * 200 + 20)
+      return `rgb(${red}, ${green}, 2)`
     }
   },
 
@@ -46,6 +65,7 @@ export default {
 
   mounted() {
     this.initChart()
+    this.initProgress()
   },
 
   destroyed() {},
@@ -181,16 +201,133 @@ export default {
       window.addEventListener('resize', function() {
         myChart.resize()
       })
+    },
+
+    initProgress() {
+      const chart = this.$refs.progress
+      const myChart = this.$echarts.init(chart)
+      const options = {
+        tooltip: {
+          show: false
+        },
+        grid: {
+          containLabel: true,
+          left: 10,
+          right: 10,
+          top: 0,
+          bottom: 0
+        },
+        yAxis: {
+          data: [
+            { value: '抗菌药物使用强度：',
+              textStyle: {
+                color: 'rgba(98, 122, 178, 1)',
+                align: 'center'
+              }
+            }
+          ],
+          offset: 50,
+          inverse: true,
+          axisLine: { show: false },
+          axisTick: { show: false },
+          axisLabel: {
+            // margin: 30,
+            fontSize: 14
+          },
+          axisPointer: {
+            label: {
+              show: false
+              // margin: 30
+            }
+          }
+        },
+        xAxis: {
+          min: 0,
+          max: 200,
+          splitLine: { show: false },
+          axisLabel: { show: false },
+          axisTick: { show: false },
+          axisLine: { show: false }
+        },
+        series: [
+          {
+            type: 'pictorialBar',
+            barGap: '-100%',
+            symbolRepeat: false,
+            symbolSize: ['102%', '150%'],
+            symbolOffset: ['-1%', '12%'],
+            barCategoryGap: '65%',
+            data: [{
+              value: 200,
+              symbol: 'image://' + progressImg
+            }],
+            animation: false,
+            z: 2
+          },
+          {
+            type: 'bar',
+            barGap: '-100%',
+            barWidth: '20%',
+            data: [this.intensity],
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, Number((2 - this.intensity / 200).toFixed(1)), 0, [
+                {
+                  offset: 0,
+                  color: 'rgba(2, 194, 2, 1)'
+                },
+                {
+                  offset: 0.5,
+                  color: 'rgba(202, 124, 2, 1)'
+                },
+                {
+                  offset: 1,
+                  color: 'rgba(193, 3, 2, 1)'
+                }
+              ])
+            },
+            z: 0
+          }
+        ]
+      }
+      myChart.setOption(options)
+      window.addEventListener('resize', function() {
+        myChart.resize()
+      })
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
+@font-face {
+  font-family: "Digital-7Mono";
+  src: url("../../../assets/fonts/Digital-7Mono.ttf");
+}
 .medical-analysis {
   height: calc(100% - 46px);
   .chart {
     height: 70%;
+  }
+  .progress {
+    height: 30%;
+    display: flex;
+    &-bar {
+      width: 78%;
+      height: 100%;
+    }
+    &-num {
+      box-sizing: border-box;
+      width: 22%;
+      height: 100%;
+      display: table;
+      & > span {
+        display: table-cell;
+        vertical-align:middle;
+        font-size: 30px;
+        font-family: "Digital-7Mono";
+        letter-spacing:4px;
+      }
+    }
   }
 }
 </style>

@@ -83,7 +83,7 @@ export default {
   .background {
     width: 100%;
     height: 100%;
-    background: rgba(33, 44, 72, 0.8);
+    background: rgba(33, 45, 72, 1);
     position: relative;
     .title-bar {
       padding: 11px 18px;

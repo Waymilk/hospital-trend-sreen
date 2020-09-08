@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-05 08:23:37
- * @LastEditTime: 2020-09-07 14:57:28
+ * @LastEditTime: 2020-09-08 14:47:39
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务情况
 -->
@@ -15,7 +15,7 @@
       >
         <div class="wrap">
           <span class="title">{{ item.label }}（{{ item.unit }}）：</span>
-          <span>{{ item.value }}</span>
+          <span class="value">{{ item.value }}</span>
         </div>
       </div>
     </div>
@@ -231,6 +231,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@font-face {
+  font-family: "Digital-7Mono";
+  src: url("../../../assets/fonts/Digital-7Mono.ttf");
+}
 .business-situation {
   height: calc(100% - 46px);
   .panel,
@@ -264,6 +268,10 @@ export default {
         .title {
           color    : #4660aa;
           font-size: 12px;
+        }
+        .value {
+          font-family: "Digital-7Mono";
+          letter-spacing:4px;
         }
       }
     }
