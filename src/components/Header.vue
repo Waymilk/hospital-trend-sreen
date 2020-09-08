@@ -28,8 +28,7 @@
 
 <script>
 export default {
-  name: 'Header',
-
+  name: 'ScreenHeader',
   data() {
     return {
       title: this.$route.meta.title,

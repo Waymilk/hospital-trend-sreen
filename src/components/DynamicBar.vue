@@ -17,15 +17,18 @@
             <div>{{ item.desc }}</div>
           </span>
         </span>
-        <span class="number">{{ item.number }}</span>
+        <span class="number">
+          <DigitRoll :rollDigits="item.number" />
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import DigitRoll from '@huoyu/vue-digitroll';
 export default {
-  components: {},
+  components: {DigitRoll},
   props: {
     dynamicData: {
       type: Array,
@@ -86,6 +89,7 @@ export default {
       .number{
         font-family: "Digital-7Mono";
         letter-spacing:4px;
+        .d-roll-wrapper{margin: 0;}
       }
     }
   }

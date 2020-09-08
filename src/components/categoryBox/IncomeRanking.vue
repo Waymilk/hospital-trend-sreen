@@ -1,35 +1,42 @@
 <template>
   <div class="box-content">
-     <swiper ref="mySwiper" :options="swiperOptions" style="width:100%;height:100%;">
+    <swiper
+      ref="mySwiper"
+      :options="swiperOptions"
+      style="width:100%;height:100%;"
+    >
       <swiper-slide>
-          <tapered-chart
-            :x-data="topXData"
-            :y-data="topYData"
-            title="门诊业务收入TOP10"
-            style="width: 100%;height:48%;"
-          />
-          <tapered-chart
-            :x-data="botXData"
-            :y-data="botYData"
-            :max="260"
-            style="width: 100%;height:48%;"
-          />
+        <tapered-chart
+          :x-data="topXData"
+          :y-data="topYData"
+          title="门诊业务收入TOP10"
+          style="width: 100%;height:48%;"
+        />
+        <tapered-chart
+          :x-data="botXData"
+          :y-data="botYData"
+          :max="260"
+          style="width: 100%;height:48%;"
+        />
       </swiper-slide>
-       <swiper-slide>
-          <tapered-chart
-            :x-data="topXData"
-            :y-data="topYData"
-            title="门诊业务收入TOP10"
-            style="width: 100%;height:48%;"
-          />
-          <tapered-chart
-            :x-data="botXData"
-            :y-data="botYData"
-            :max="260"
-            style="width: 100%;height:48%;"
-          />
+      <swiper-slide>
+        <tapered-chart
+          :x-data="topXData"
+          :y-data="topYData"
+          title="门诊业务收入TOP10"
+          style="width: 100%;height:48%;"
+        />
+        <tapered-chart
+          :x-data="botXData"
+          :y-data="botYData"
+          :max="260"
+          style="width: 100%;height:48%;"
+        />
       </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
+      <div
+        slot="pagination"
+        class="swiper-pagination"
+      />
     </swiper>
   </div>
 </template>

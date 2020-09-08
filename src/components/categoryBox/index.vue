@@ -48,7 +48,7 @@ import BusinessRanking from './BusinessRanking'
 import IncomeRanking from './IncomeRanking'
 import BoxWrap from '../BoxWrap'
 export default {
-  name: 'Header',
+  name: 'Content',
   components: {
     ResourceDynamic,
     IncomeDynamics,

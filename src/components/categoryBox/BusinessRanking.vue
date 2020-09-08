@@ -1,11 +1,21 @@
 <template>
   <div class="box-content">
-    <swiper ref="mySwiper" :options="swiperOptions" style="width:100%;height:100%;">
+    <swiper
+      ref="mySwiper"
+      :options="swiperOptions"
+      style="width:100%;height:100%;"
+    >
       <swiper-slide>
-        <div ref="businessRanking" style="width:100%;height:100%"></div>
+        <div
+          ref="businessRanking"
+          style="width:100%;height:100%"
+        />
       </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
-  </swiper>
+      <div
+        slot="pagination"
+        class="swiper-pagination"
+      />
+    </swiper>
   </div>
 </template>
 
@@ -28,13 +38,13 @@ export default {
       }
     }
   },
-  watch: {},
-  created() {},
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper
     }
   },
+  watch: {},
+  created() {},
   mounted() {
     this.initChart()
   },
