@@ -66,9 +66,17 @@ export default {
     margin-right: 4%;
     display: inline-block;
     vertical-align: middle;
-    height: 20%;
-    padding-bottom: 15px;
+    height: 16%;
+    margin-bottom: 15px;
     box-sizing: border-box;
+    // &:hover{
+    //   box-shadow: 0 0 21px 5px rgba(0, 108, 255, 0.8);
+    //   position: relative;
+    //   top: -4px;
+    //   transition: all .5s;
+    //   right: -4px;
+    //   border-radius: 4px;
+    // }
     &:nth-child(2n){
       margin-right: 0;
     }
