@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 14:15:03
- * @LastEditTime: 2020-09-07 16:00:55
+ * @LastEditTime: 2020-09-08 14:52:21
  * @LastEditors: Nahco.Huang
  * @Description: 病种分析
 -->
@@ -86,8 +86,8 @@ export default {
         grid: {
           left: '5%',
           right: '5%',
-          top: '6%',
-          bottom: '5%',
+          top: '8%',
+          bottom: '-5%',
           containLabel: true
         },
         xAxis: [
