@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 09:23:56
- * @LastEditTime: 2020-09-08 14:50:01
+ * @LastEditTime: 2020-09-08 16:51:18
  * @LastEditors: Nahco.Huang
  * @Description: 药品分析
 -->
@@ -20,8 +20,15 @@
           style="height:100%;"
         />
       </div>
-      <div class="progress-num">
-        <span :style="{color: intensityNumberColor}">{{ intensity }}</span>
+      <div
+        class="progress-num"
+        :style="{color: intensityNumberColor}"
+      >
+        <IOdometer
+          class="iOdometer"
+          :duration="200"
+          :value="intensity"
+        />
       </div>
     </div>
   </div>
@@ -30,10 +37,14 @@
 <script>
 import progressImg from '@/assets/img/progress.png'
 import echarts from 'echarts'
+import IOdometer from 'vue-odometer';
+import 'odometer/themes/odometer-theme-default.css';
 export default {
   name: 'MedicalAnalysis',
 
-  components: {},
+  components: {
+    IOdometer
+  },
 
   mixins: [],
 
@@ -328,7 +339,6 @@ export default {
         vertical-align:middle;
         font-size: 30px;
         font-family: "Digital-7Mono";
-        letter-spacing:4px;
       }
     }
   }

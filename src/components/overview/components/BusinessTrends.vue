@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-04 13:35:00
- * @LastEditTime: 2020-09-07 14:56:38
+ * @LastEditTime: 2020-09-08 16:50:09
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务趋势
 -->
@@ -241,8 +241,7 @@ export default {
       const options = {
         tooltip: {
           show: true,
-          position: function(point, dom) {
-            console.log(dom)
+          position: function(point) {
             return [point[0], '5%']
           },
           formatter: function(ticket) {

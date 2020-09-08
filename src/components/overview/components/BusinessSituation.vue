@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-05 08:23:37
- * @LastEditTime: 2020-09-08 15:48:01
+ * @LastEditTime: 2020-09-08 16:40:39
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务情况
 -->
@@ -239,9 +239,12 @@ export default {
       }
       .wrap {
         padding: 0 12px;
-      } 
-      & .item .wrap .title .txt {
-        margin-left: 0;
+        .txt {
+          margin-left: 0;
+        }
+        .number {
+          letter-spacing: 0;
+        }
       }
     }
   }
