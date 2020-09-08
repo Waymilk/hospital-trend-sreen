@@ -1,23 +1,14 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-05 08:23:37
- * @LastEditTime: 2020-09-08 14:47:39
+ * @LastEditTime: 2020-09-08 15:48:01
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务情况
 -->
 <template>
   <div class="business-situation">
     <div class="panel">
-      <div
-        v-for="(item,index) in panelData"
-        :key="index"
-        class="item"
-      >
-        <div class="wrap">
-          <span class="title">{{ item.label }}（{{ item.unit }}）：</span>
-          <span class="value">{{ item.value }}</span>
-        </div>
-      </div>
+      <DynamicBar :dynamic-data="panelData" />
     </div>
     <div class="chart">
       <div
@@ -45,11 +36,14 @@
 </template>
 
 <script>
+import DynamicBar from '@/components/DynamicBar.vue'
 import echarts from 'echarts'
 export default {
   name: '',
 
-  components: {},
+  components: {
+    DynamicBar
+  },
 
   mixins: [],
 
@@ -58,10 +52,10 @@ export default {
   data() {
     return {
       panelData: [
-        { label: '今日门急诊人次', value: 1102, unit: '人' },
-        { label: '今日出院人次', value: 32, unit: '人' },
-        { label: '年度门急诊人次', value: 132245, unit: '人' },
-        { label: '年度出院人次', value: 12056, unit: '人' }
+        { name: '今日门急诊人次（人）：', number: 1102 },
+        { name: '今日出院人次（人）：', number: 32 },
+        { name: '年度门急诊人次（人）：', number: 132245 },
+        { name: '年度出院人次（人）：', number: 12056 }
       ],
       chartType: 0,
       chartData: {
@@ -231,10 +225,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@font-face {
-  font-family: "Digital-7Mono";
-  src: url("../../../assets/fonts/Digital-7Mono.ttf");
-}
 .business-situation {
   height: calc(100% - 46px);
   .panel,
@@ -243,36 +233,15 @@ export default {
   }
   .panel {
     box-sizing: border-box;
-    padding   : 15px;
-    .item {
-      box-sizing    : border-box;
-      width         : 48%;
-      margin-right  : 20px;
-      margin-bottom : 22px;
-      height        : 43.5%;
-      display       : inline-block;
-      vertical-align: middle;
-      &:nth-child(2n) {
-        margin-right: 0;
+    /deep/.dynamic-bar {
+      .item {
+        height: 43.5%;
       }
       .wrap {
-        background-color: rgba(255, 255, 255, 0.03);
-        border-radius   : 4px;
-        height          : 100%;
-        padding         : 0 10px;
-        display         : flex;
-        justify-content : space-between;
-        align-items     : center;
-        font-size       : 32px;
-        color           : #006cff;
-        .title {
-          color    : #4660aa;
-          font-size: 12px;
-        }
-        .value {
-          font-family: "Digital-7Mono";
-          letter-spacing:4px;
-        }
+        padding: 0 12px;
+      } 
+      & .item .wrap .title .txt {
+        margin-left: 0;
       }
     }
   }
