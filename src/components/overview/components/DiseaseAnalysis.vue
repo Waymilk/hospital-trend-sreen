@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 14:15:03
- * @LastEditTime: 2020-09-07 14:58:19
+ * @LastEditTime: 2020-09-07 16:00:55
  * @LastEditors: Nahco.Huang
  * @Description: 病种分析
 -->
@@ -132,7 +132,10 @@ export default {
               show: true,
               position: 'right',
               fontSize: 12,
-              color: '#ffffff'
+              color: '#ffffff',
+              formatter: function(params) {
+                return params.value.toLocaleString()
+              }
             }
           }
         ]
