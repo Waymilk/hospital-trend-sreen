@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 09:23:56
- * @LastEditTime: 2020-09-08 16:51:18
+ * @LastEditTime: 2020-09-08 18:42:01
  * @LastEditors: Nahco.Huang
  * @Description: 药品分析
 -->
@@ -9,7 +9,7 @@
   <div class="medical-analysis">
     <div class="chart">
       <div
-        ref="chart"
+        ref="medicalChart"
         style="height:100%;"
       />
     </div>
@@ -17,7 +17,7 @@
       <div class="progress-bar">
         <div
           ref="progress"
-          style="height:100%;"
+          style="width:100%;height:100%;"
         />
       </div>
       <div
@@ -38,7 +38,6 @@
 import progressImg from '@/assets/img/progress.png'
 import echarts from 'echarts'
 import IOdometer from 'vue-odometer';
-import 'odometer/themes/odometer-theme-default.css';
 export default {
   name: 'MedicalAnalysis',
 
@@ -78,15 +77,15 @@ export default {
   created() {},
 
   mounted() {
-    this.initChart()
+    this.initMedicalChart()
     this.initProgress()
   },
 
   destroyed() {},
 
   methods: {
-    initChart() {
-      const chart = this.$refs.chart
+    initMedicalChart() {
+      const chart = this.$refs.medicalChart
       const myChart = this.$echarts.init(chart)
       const options = {
         tooltip: {
@@ -210,24 +209,20 @@ export default {
           }
         ]
       }
-
       myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
     },
 
     initProgress() {
-      const chart = this.$refs.progress
-      const myChart = this.$echarts.init(chart)
+      const progress = this.$refs.progress
+      const myProgress = this.$echarts.init(progress)
       const options = {
         tooltip: {
           show: false
         },
         grid: {
           containLabel: true,
-          left: 10,
-          right: 10,
+          left: '1%',
+          right: '1%',
           top: 0,
           bottom: 0
         },
@@ -303,20 +298,13 @@ export default {
           }
         ]
       }
-      myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
+      myProgress.setOption(options)
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-@font-face {
-  font-family: "Digital-7Mono";
-  src: url("../../../assets/fonts/Digital-7Mono.ttf");
-}
 .medical-analysis {
   height: calc(100% - 46px);
   .chart {
