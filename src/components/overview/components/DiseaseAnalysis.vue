@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 14:15:03
- * @LastEditTime: 2020-09-08 14:52:21
+ * @LastEditTime: 2020-09-09 18:17:17
  * @LastEditors: Nahco.Huang
  * @Description: 病种分析
 -->
@@ -141,9 +141,6 @@ export default {
         ]
       }
       myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
     }
   }
 }

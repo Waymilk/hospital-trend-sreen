@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 09:58:15
- * @LastEditTime: 2020-09-07 10:48:15
+ * @LastEditTime: 2020-09-09 18:14:43
  * @LastEditors: Nahco.Huang
  * @Description: 患者负担分析
 -->
@@ -228,9 +228,6 @@ export default {
       }
 
       myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
     }
   }
 }

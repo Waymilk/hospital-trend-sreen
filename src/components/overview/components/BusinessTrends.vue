@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-04 13:35:00
- * @LastEditTime: 2020-09-08 16:50:09
+ * @LastEditTime: 2020-09-09 18:17:26
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务趋势
 -->
@@ -230,9 +230,6 @@ export default {
         ]
       }
       myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
     },
 
     initIncomeChart() {
@@ -422,9 +419,6 @@ export default {
       }
 
       myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
     }
   }
 }

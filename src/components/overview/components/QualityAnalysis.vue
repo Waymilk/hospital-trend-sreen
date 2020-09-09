@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-07 11:34:09
- * @LastEditTime: 2020-09-07 14:58:11
+ * @LastEditTime: 2020-09-09 18:16:58
  * @LastEditors: Nahco.Huang
  * @Description: 医疗质量分析
 -->
@@ -232,9 +232,6 @@ export default {
       }
 
       myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
     }
   }
 }

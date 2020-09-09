@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-05 08:23:37
- * @LastEditTime: 2020-09-08 16:40:39
+ * @LastEditTime: 2020-09-09 18:17:38
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务情况
 -->
@@ -216,9 +216,6 @@ export default {
         ]
       }
       myChart.setOption(options)
-      window.addEventListener('resize', function() {
-        myChart.resize()
-      })
     }
   }
 }
