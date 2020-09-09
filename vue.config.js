@@ -6,6 +6,8 @@
  * @Description:
  */
 module.exports = {
+  publicPath:process.env.NODE_ENV === 'production'?'./hospital-trend-screen':'./',
+  lintOnSave:true
   // loaders:[
   //   {
   //     test:/\.less$/i,

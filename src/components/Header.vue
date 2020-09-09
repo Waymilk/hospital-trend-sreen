@@ -76,12 +76,12 @@ export default {
   }
   .center{
     position: absolute;
-    bottom: 10px;
+    top: 52%;
     left: 50%;
     transform: translateX(-50%);
-    width: 76%;
+    width: 78%;
     margin:0 auto;
-    height:36px;
+    height:38%;
     background-image: url(../assets/img/header.png);
     background-size: 100% 100%;
     text-align: center;

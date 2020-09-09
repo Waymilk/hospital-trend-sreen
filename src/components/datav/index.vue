@@ -34,7 +34,6 @@ export default {
     flex-direction: column;
     .header{
       height: 8%;
-      margin-bottom: 1%;
     }
     .category-box,
     .overview{

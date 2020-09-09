@@ -67,7 +67,7 @@ export default {
     display: inline-block;
     vertical-align: middle;
     height: 16%;
-    margin-bottom: 15px;
+    margin-bottom: 3%;
     box-sizing: border-box;
     // &:hover{
     //   box-shadow: 0 0 21px 5px rgba(0, 108, 255, 0.8);
@@ -84,12 +84,12 @@ export default {
       background-color: rgba(255, 255, 255,0.03);
       border-radius: 4px;
       height: 100%;
-      padding: 0 18px;
+      padding: 0 4%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: #006CFF;
-      font-size: 32px;
+      font-size: 30px;
       .title{
         color: #4660AA;
         font-size: 12px;
@@ -101,8 +101,6 @@ export default {
       }
       .number{
         font-family: "Digital-7Mono";
-        letter-spacing:2px;
-        .d-roll-wrapper{margin: 0;}
         .iOdometer{
           font-family: "Digital-7Mono";
         }
