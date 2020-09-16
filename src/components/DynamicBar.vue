@@ -60,10 +60,10 @@ export default {
 .dynamic-bar{
   height: 100%;
   box-sizing: border-box;
-  padding:8px 20px;
+  padding:2%;
   .item{
-    width: 48%;
-    margin-right: 4%;
+    width: 49%;
+    margin-right: 2%;
     display: inline-block;
     vertical-align: middle;
     height: 16%;

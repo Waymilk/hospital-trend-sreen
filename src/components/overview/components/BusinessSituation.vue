@@ -235,7 +235,7 @@ export default {
         height: 43.5%;
       }
       .wrap {
-        padding: 0 12px;
+        padding: 0 3%;
         .txt {
           margin-left: 0;
         }
