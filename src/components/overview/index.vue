@@ -101,6 +101,7 @@ export default {
   flex-wrap      : wrap;
   justify-content: space-evenly;
   align-content  : center;
+  height: 92%;
   .item {
     flex-basis: 31.5%;
     margin-top: 12px;

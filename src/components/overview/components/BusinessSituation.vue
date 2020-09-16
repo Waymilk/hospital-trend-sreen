@@ -52,10 +52,10 @@ export default {
   data() {
     return {
       panelData: [
-        { name: '今日门急诊人次（人）：', number: 1102 },
-        { name: '今日出院人次（人）：', number: 32 },
-        { name: '年度门急诊人次（人）：', number: 132245 },
-        { name: '年度出院人次（人）：', number: 12056 }
+        { name: '今日门急诊人次(人)：', number: 1102 },
+        { name: '今日出院人次(人)：', number: 32 },
+        { name: '年度门急诊人次(人)：', number: 132245 },
+        { name: '年度出院人次(人)：', number: 12056 }
       ],
       chartType: 0,
       chartData: {
