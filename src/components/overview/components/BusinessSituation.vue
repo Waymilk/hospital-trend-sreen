@@ -1,7 +1,7 @@
 <!--
  * @Author: Nahco.Huang
  * @Date: 2020-09-05 08:23:37
- * @LastEditTime: 2020-09-09 18:17:38
+ * @LastEditTime: 2020-09-16 15:01:24
  * @LastEditors: Nahco.Huang
  * @Description: 年度业务情况
 -->
@@ -38,6 +38,7 @@
 <script>
 import DynamicBar from '@/components/DynamicBar.vue'
 import echarts from 'echarts'
+import io from 'socket.io-client'
 export default {
   name: '',
 
@@ -120,6 +121,7 @@ export default {
 
   mounted() {
     this.initBarChart()
+    // this.dynamicFetchData()
   },
 
   destroyed() {},
@@ -216,6 +218,27 @@ export default {
         ]
       }
       myChart.setOption(options)
+    },
+
+    dynamicFetchData() {
+      const socket = io('ws://192.168.8.88:3000/') // 配置连接地址
+      socket.on('connect', ()=>{ // 监听socket连接
+        console.log('socket connet success')
+      })
+      socket.emit('check', true) // 向后端check事件提交信息
+      socket.on('push', data => { // 监听后端推送的push事件
+        this.panelData.forEach((item, index)=>{
+          item.number = data[index]
+        })        
+      })
+      let errorTimes = 5;
+      socket.on('connect_error', err => { // 监听连接错误事件
+        if(errorTimes >= 5) {
+          socket.close() // 关闭close
+        }
+        console.log('connect error: ', err)
+        errorTimes++;
+      })
     }
   }
 }

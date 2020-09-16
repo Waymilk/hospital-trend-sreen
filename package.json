@@ -15,6 +15,7 @@
     "element-ui": "^2.13.2",
     "highcharts": "^8.2.0",
     "odometer": "^0.4.8",
+    "socket.io-client": "^2.3.0",
     "swiper": "^4.5.1",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
